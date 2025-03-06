@@ -1,0 +1,6 @@
+PATCH  http://localhost:3001/api/notes/2
+content-type: application/json
+
+{     "name": "Modificado",
+      "type": "Not Important"
+   }

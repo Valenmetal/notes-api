@@ -130,7 +130,7 @@ app.use((req, res) => {
       error: "Not Found"
    })
 })
-const hostname = "127.0.0.1"
+const hostname = "0.0.0.0"
 app.listen(PORT, hostname, () => {
    console.log(`Server running at http://${hostname}:${PORT}/`)
 })

@@ -90,7 +90,7 @@ app.post("/api/notes", (req, res) => {
          month: "short",
          day: "numeric",
       }),
-      tags: Array.isArray(result.data.tags) ? result.data.tags : [], // Asegurar que tags sea un array
+      tags: result.data.tags ? result.data.tags : [], // Asegurar que tags sea un array
    }
 
    lista = [...lista, newItem]
@@ -115,7 +115,7 @@ app.patch("/api/notes/:id", (req, res) => {
    const updatedNote = {
       ...lista[noteIndex],
       ...result.data,
-      tags: Array.isArray(result.data.tags) ? result.data.tags : lista[noteIndex].tags,
+      tags: result.data.tags || [],
    }
 
    lista[noteIndex] = updatedNote

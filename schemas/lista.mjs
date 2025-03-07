@@ -5,7 +5,7 @@ const listaSchema = z.object({
         invalid_type_error: 'Note must be a string',
         required_error: 'Note name is required.'
     }),
-    tags: z.string(),
+    tags: z.array(z.string()).optional(),
 
 })
 
